@@ -1,0 +1,48 @@
+###
+
+# curl http://localhost:8080/albums
+#    --include
+#    --header "Content-Type: application/json"
+#    --request "POST"
+#    --data '{"id": "4","title": "The Modern Sound of Betty Carter","artist": "Betty Carter","price": 49.99}'
+POST http://localhost:8080/albums
+Content-Type: application/json
+
+{
+  "id": "4",
+  "title": "The Modern Sound of Betty Carter",
+  "artist": "Betty Carter",
+  "price": 49.99
+}
+
+###
+
+# curl http://localhost/albums
+GET localhost:8080/albums
+
+###
+
+# curl http://localhost:8080/albums/2
+GET localhost:8080/albums/2
+
+###
+DELETE localhost:8080/albums/1
+
+###
+
+# curl -X "PUT" http://localhost:8080/albums/2
+#    --include
+#    --header "Content-Type: application/json"
+#    --request "POST" \
+#    --data '{"title": "test"}'
+PUT localhost:8080/albums/2
+Content-Type: application/json
+
+{
+  "title": "test"
+}
+
+###
+
+
+
